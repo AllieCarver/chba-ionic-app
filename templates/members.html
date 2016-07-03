@@ -1,0 +1,14 @@
+<ion-view view-title="Members Directory" hide-nav-bar="false"  hide-back-button="false" cache-view="false">
+  <ion-content>
+    <ion-list>
+      <ion-item on-swipe-right="call_member('{{mem.telephone}}')" class="item item-avatar item-icon-right"  ng-repeat="mem in members track by $index" type="item-text-wrap" href="#/members/{{$index}}">
+        <img ng-src="{{'http://chba-pei.ca/images/membersimages/'+mem.image_file}}"  err-src="http://chba-pei.ca/images/no_img.jpg">
+            
+        <h2 class="big-line">{{mem.member}}</h2>
+
+        <i class="icon ion-chevron-right icon-accessory"></i>
+      </ion-item>
+    </ion-list>
+
+  </ion-content>
+</ion-view>

@@ -1,0 +1,41 @@
+<ion-view view-title="{{selected_member.member}}" cache-view="false">
+  <ion-content class="padding">                
+  <div class="list">
+  <div class="item item-body card">
+    <img class="blockimg"  ng-src="{{'http://chba-pei.ca/images/membersimages/'+selected_member.image_file}}"  err-src="http://chba-pei.ca/images/no_img.jpg">
+    <p>
+      {{selected_member.description}}
+    </p>
+  </div>
+  <div class="item item-divider">
+    Contact
+  </div>
+  <div class="item item-icon-right">
+  Phone: {{selected_member.telephone}} 
+   <a href="tel:{{selected_member.telephone}}">
+    <i class="icon ion-ios-telephone-outline custom-icon"></i>
+  </a>    
+  </div>
+  <div class="item item-icon-right">
+  Web: {{selected_member.website}} 
+  <a href="#" onclick="cordova.InAppBrowser.open('{{selected_member.website}}', '_blank', 'location=yes'); return false;"> 
+  <i class="icon ion-ios-world-outline custom-icon"></i>
+  </a>
+  </div>
+  <div class="item item-icon-right">
+  Email: {{selected_member.member_email}}
+  <a ng-href="mailto:{{selected_member.member_email}}"> 
+  <i class="icon ion-ios-email-outline custom-icon"></i>
+  </a> 
+  </div>
+  <div class="item item-divider">
+    Location
+  </div>
+  <div class="item item-body">
+  {{selected_member.address}}<br />
+  {{selected_member.city}} {{selected_member.prov}}   
+  </div>
+
+</div>
+  </ion-content>
+</ion-view>

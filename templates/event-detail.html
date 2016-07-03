@@ -1,0 +1,40 @@
+<ion-view view-title="{{selected_event.name}}" cache-view="false">
+  <ion-content class="padding">          
+  <div class="list">
+  <div ng-if="selected_event.image_file" class="item item-body card">
+    <img  ng-if="selected_event.image_file" class="blockimg"  ng-src="{{'http://chba-pei.ca/uploads/'+selected_event.image_file}}"  err-src="http://chba-pei.ca/images/no_image.jpg">
+  </div>
+    <div class="item item-divider">
+    Event
+  </div>
+  <div class="item item-text-wrap">
+   {{selected_event.description}}
+  </div>
+  <div class="item item-divider">
+    When
+  </div>
+
+  <div class="item">
+
+<div class="row">
+  <div class="col-50">
+  {{selected_event.date_of | date:'mediumDate'}}
+  </div>
+  <div class="col-50 text-right">
+ {{("2015-05-30T"+selected_event.time_start) | date : 'shortTime'}}-        {{("2015-05-30T"+selected_event.time_end) | date : 'shortTime'}}
+  </div>
+</div>
+  </div>
+  <div class="item item-divider">
+    Where
+  </div>
+  <div class="item">
+   {{selected_event.location}}
+  </div>
+
+<button class="button button-full button-positive icon-right ion-ios-calendar-outline" ng-click="add_reminder()">
+  Add event to calendar
+</button>
+</div>
+  </ion-content>
+</ion-view>

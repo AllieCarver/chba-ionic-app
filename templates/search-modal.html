@@ -1,0 +1,29 @@
+<ion-modal-view>
+    <ion-header-bar class="bar-balanced noborder">
+      <h1 class="title">Search Results</h1>
+      <button class="button button-clear ion-close-round" ng-click="closeModal()"></button>
+    </ion-header-bar>
+    <ion-content scroll="true">
+
+     <div class="item item-divider">
+        <form ng-submit="search(searchBox)" role="form" name="searchbox" ng-class="searchBox" novalidate  accept-charset="utf-8">    
+        <label class="item item-input searchbar">
+          <i class="icon ion-search placeholder-icon"></i>
+          <input type="search" ng-model="searchtext.text" placeholder="Search">
+        </label>
+        </form>
+        
+      </div>   
+
+    <ion-list>
+      <ion-item on-swipe-right="call_member('{{mem.telephone}}')" class="item-remove-animate item-avatar item-icon-right"  ng-repeat="mem in searchtext.members track by $index" type="item-text-wrap"  href="#/search/{{mem.member_id}}">
+        <img ng-src="{{'http://chba-pei.ca/images/membersimages/'+mem.image_file}}"  err-src="http://chba-pei.ca/images/membersimages/no_image.jpg">
+        <h2 class="elementCenterAlign">{{mem.member}}</h2>
+
+        <i class="icon ion-chevron-right icon-accessory"></i>
+      </ion-item>
+    </ion-list>
+
+    </ion-content>
+  </ion-modal-view>
+      <button class="button button-full button-clear close-button" ng-click="closeModal()"></button>

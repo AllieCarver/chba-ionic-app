@@ -1,0 +1,39 @@
+<ion-view title="Home" hide-nav-bar="true" class="bg"  cache-view="false">
+
+      <div class="bar-header header">
+       <div class="float-left">
+        <img id="homeimg" src="img/logo-blank.png"></img>
+        </div>
+        <div class="float-right text-center"></div>
+        <br />
+        <h3 class=""><strong>CHBA-PEI</strong></h3>
+        <h4 class=""><em>Home Builders App</em></h4>
+        </div> 
+      </div>
+        
+     <br />
+      <ion-content scroll="true">
+        <div id="searchbardiv">
+        <form ng-submit="search(searchBox)" role="form" name="searchbox" ng-class="searchBox" novalidate  accept-charset="utf-8">    
+        <label class="item item-input searchbar">
+          <i class="icon ion-search placeholder-icon"></i>
+          <input type="search" ng-model="searchtext.text" placeholder="Search">
+        </label>
+        </form>
+        
+      </div>
+      <button nav-direction="forward" class="button button-block button-balanced buttonskew" ui-sref="members">
+          <h3 class="unskew">Member Directory</h3>
+    </button>
+        <button nav-direction="forward" class="button button-block button-balanced buttonskew" ui-sref="advantages">
+          <h3 class="unskew">Member Advantages</h3>
+        </button>
+     <button nav-direction="forward" class="button button-block button-balanced buttonskew" ui-sref="events">
+          <h3 class="unskew">Events</h3>
+        </button>
+        <button nav-direction="forward" class="button button-block button-balanced buttonskew" ui-sref="contact">
+          <h3 class="unskew">About</h3>
+        </button>
+      </ion-content>
+
+</ion-view>

@@ -1,0 +1,36 @@
+<ion-view view-title="About" hide-nav-bar="false"  hide-back-button="false">
+  <ion-content>
+
+<div class="list">
+<form role="form" name="contactForm" ng-class="contactForm" novalidate  accept-charset="utf-8">    
+  <div class="item item-body card" id="aboutcard">
+  <br />
+  The Canadian Home Builders' Association of Prince Edward Island's Home Builders App 
+  is designed to help home builders and association members quickly find and connect with
+  services. <br /><br />
+  Use the search bar to quickly find associated members. You can search by name or service,
+  swipe to call member immediately or tap for more details.
+  <br /><br />
+  </div>
+   <div class="item item-divider">
+   Feedback
+   </div>
+  <label class="item item-input">
+    <input class="form-control" type="text" placeholder="Name" ng-model="contact.name" name="customer"required>
+  </label>
+  <label class="item item-input">
+<input class="form-control" type="email" ng-model="contact.email" name="customeremail" placeholder="Email" required>
+  </label>
+    <label class="item item-input">
+<input class="form-control" type="tel" ng-model="contact.phone" name="customerphone" placeholder="Phone" required>
+  </label>
+  <label class="item item-input">
+    <textarea class="form-control" name="message" ng-model="contact.message" placeholder="Comments"></textarea>
+  </label>
+  <button class="button button-block button-positive" ng-click="send(contact)">Send</button>
+</div>
+</form>
+<div>{{contact.success}}</div> 
+  </ion-content>
+</ion-view>
+
