@@ -8,6 +8,6 @@ https://play.google.com/store/apps/details?id=com.ionicframework.chba402518&hl=e
 https://itunes.apple.com/us/app/chba-pei-home-builders-app/id1038196699?mt=8
 
 #Screenshots
-![Alt text](data/screen1.png?raw=true)  
-![Alt text](data/screen2.png?raw=true)  
-![Alt text](data/screen3.png?raw=true)  
+![Alt text](screenshots/screen1.png?raw=true)  
+![Alt text](screenshots/screen2.png?raw=true)  
+![Alt text](screenshots/screen3.png?raw=true)  
